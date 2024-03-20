@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar'
 import Body from './components/Body'
 import Departments from './components/Departments'
+import Footer from './components/Footer'
 
 import React from 'react'
 
@@ -11,8 +12,8 @@ function App() {
       <Body />
 
       <div className="bg-[#f7f8fa] flex flex-col justify-center items-center ">
-<h1 className='text-2xl pt-1'> <b> Our <span>Departments</span> </b></h1>
-        
+        <h1 className='text-2xl pt-1'> <b> Our <span>Departments</span> </b></h1>
+
 
         <div className="  w-full flex justify-center items-center h-screen flex-col gap-5  ">
           <div className="flex gap-5">
@@ -37,6 +38,7 @@ function App() {
         </div>
 
       </div>
+      <Footer/>
 
     </>
   )
