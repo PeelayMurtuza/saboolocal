@@ -1,8 +1,9 @@
 import React from 'react'
 
-function Navbar() {
+function Navbar(){
     return (
         <>
+        
             <div className='bg-[#137a4b] h-10 flex justify-center items-center pl-80    '>
                 <ul className='flex justify-center items-center gap-5 pl-40'>
                     <li><a href="#" className='text-[white]  ' > <pre>Mandatory Disclosure |</pre></a> </li>
@@ -45,25 +46,7 @@ function Navbar() {
                     <marquee behavior="" direction="left" className=' text-[#137a4b]' >Rabbi Zidni 'Ilma. : ربِّ زِدْنِي عِلْماً - "My lord, increase me in knowledge" [20:119].</marquee>
                 </div>
             </div>
-            <div className="bg-purple-950 h-12 text-white flex justify-center items-center">
-
-            <ul className='flex gap-5  '>
-                <li><a href=""> Home </a></li>
-                <li><a href=""> Institute </a></li>
-                <li><a href=""> admission </a></li>
-                <li><a href=""> Examination </a></li>
-                <li><a href=""> Departments </a></li>
-                <li><a href=""> training and placement </a></li>
-                <li><a href=""> NAAC </a></li>
-                <li><a href=""> EDC </a></li>
-                <li><a href=""> online fee payment </a></li>
-                <li><a href=""> life @ mhssce </a></li>
-                <li><a href="">Alumni </a></li>
-                <li><a href=""> NBA </a></li>
-            </ul>
-                
-            </div>
-
+            
         </>
     )
 }

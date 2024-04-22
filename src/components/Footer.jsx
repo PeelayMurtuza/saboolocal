@@ -1,6 +1,61 @@
 import React from 'react'
+import ChatBot from 'react-simple-chatbot';
+import { ThemeProvider } from 'styled-components';
 
 function Footer() {
+  
+  const steps = [
+    {
+      id: '0',
+      message: 'Hey EveryOne!',
+      trigger: '1',
+    }, 
+    
+    {
+      id: '1',
+      message: 'Please write your username',
+      trigger: '2'
+    },
+    {
+      id: '2',
+      user: true,
+      trigger: '3',
+    }, 
+    {
+      id: '3',
+      message: " hi {previousValue}, how can I help you?",
+      trigger: 4
+    }, 
+    
+    {
+      id: '4',
+      options: [
+        { value: 1, label: 'View Courses' },
+        { value: 2, label: 'Read Articles' },
+
+      ],
+      end: true
+    }
+  ];
+
+
+  const theme = {
+    background: '#F8FAFC',
+    fontFamily: 'Sans Serif',
+    headerBgColor: '#1893A6',
+    headerFontColor: '#fff',
+    headerFontSize: '15px',
+    botBubbleColor: '#fff',
+    botFontColor: '#000000',
+    userBubbleColor: '#cdefac',
+    userFontColor: '#4a4a4a',
+  };
+
+  const config = {
+    botAvatar: "img.png",
+    floating: true,
+  };
+
   return (
     <>
       <div className=' bg-[#1c345a] text-white flex justify-center items-center gap-5 gap-x-20  flex-col pt-5 '>
@@ -28,18 +83,18 @@ function Footer() {
 
           <div className="bg-[#1c345a] w-96 h-96 flex  flex-col gap-6">
             <h3>Login</h3>
-            <p className=' border-b-2 border-opacity-15 flex flex-col pb-2 border-black  ' ><a href="bor">Faculty</a></p>
-            <p className=' border-b-2 border-opacity-15 flex flex-col pb-2 border-black  ' ><a href="">Admin</a></p>
-            <p className=' border-b-2 border-opacity-15 flex flex-col pb-2 border-black  ' ><a href="">Dean Academics</a></p>
-            <p className=' border-b-2 border-opacity-15 flex flex-col pb-2 border-black  ' ><a href="">NAAC</a></p>
-            <p className=' border-b-2 border-opacity-15 flex flex-col pb-2 border-black  ' ><a href="">Alumni</a></p>
+            <p className=' border-b-2 border-opacity-15 flex flex-col pb-2 border-black hover:opacity-50 ' ><a href="bor">Faculty</a></p>
+            <p className=' border-b-2 border-opacity-15 flex flex-col pb-2 border-black hover:opacity-50 ' ><a href="">Admin</a></p>
+            <p className=' border-b-2 border-opacity-15 flex flex-col pb-2 border-black hover:opacity-50 ' ><a href="">Dean Academics</a></p>
+            <p className=' border-b-2 border-opacity-15 flex flex-col pb-2 border-black hover:opacity-50 ' ><a href="">NAAC</a></p>
+            <p className=' border-b-2 border-opacity-15 flex flex-col pb-2 border-black hover:opacity-50 ' ><a href="">Alumni</a></p>
 
           </div>
         </div>
 
         <div className="bg-[#06224e] w-full h-12 flex justify-center items-center gap-x-24 text-sm">
 
-          <div className="">Copyright ©2020 M.H. Saboo Siddik College Of Engineering. All Rights Reserved | Website design by Hitech Advertising</div>
+          <div className="">Copyright ©2020 M.H. Saboo Siddik College Of Engineering. All Rights Reserved | Website created by MURTUZA PEELAY TE - [CSE-AIML] </div>
 
           <div className=" flex gap-x-5 ">
             <p>h1dqeyaibhe</p>
@@ -49,12 +104,38 @@ function Footer() {
           </div>
 
         </div>
-
       </div>
+
+      
+
+
+      <div className="App">
+        <ThemeProvider theme={theme}>
+          <ChatBot
+
+            headerTitle="SABOO SIDDIK COE"
+            steps={steps}
+            {...config}
+
+          />
+        </ThemeProvider>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     </>
   );
 }
 
 export default Footer
 
-// #06224e
